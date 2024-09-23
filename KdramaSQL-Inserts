@@ -1,0 +1,97 @@
+-- Insert into drama table
+INSERT INTO drama (drama_name, director, synopsis, release_date, price) VALUES
+('Crash Landing on You', 'Lee Jung-hyo', 'A South Korean heiress accidentally lands in North Korea, where she meets a North Korean officer.', '2019-12-14', 20.00),
+('Goblin', 'Lee Eung-bok', 'A modern-day goblin seeks a bride to end his immortality.', '2016-12-02', 20.00),
+('Itaewon Class', 'Kim Sung-yoon', 'An ex-convict and his friends fight to make their ambitious dreams for their street bar a reality.', '2020-01-31', 20.00),
+('Descendants of the Sun', 'Lee Eung-bok', 'A love story between a soldier and a doctor.', '2016-02-24', 20.00),
+('My Love from the Star', 'Jang Tae-yoo', 'An alien who landed on Earth 400 years ago begins a romance with a famous actress.', '2013-12-18', 20.00),
+('The Heirs', 'Kang Shin-hyo', 'A group of wealthy high school students struggle with love and friendship.', '2013-10-09', 20.00),
+('Strong Woman Do Bong-soon', 'Lee Hyung-min', 'A woman born with superhuman strength gets a job as a bodyguard.', '2017-02-24', 20.00),
+('W: Two Worlds', 'Jung Dae-yoon', 'A surgeon finds herself pulled into a webtoon created by her father.', '2016-07-20', 20.00),
+('Reply 1988', 'Shin Won-ho', 'Follows the lives of five friends and their families in the late 1980s.', '2015-11-06', 20.00),
+('Hotel Del Luna', 'Oh Choong-hwan', 'A man becomes the manager of a hotel for ghosts.', '2019-07-13', 20.00),
+('Kingdom', 'Kim Seong-hun', 'A crown prince tries to save his kingdom from a mysterious plague.', '2019-01-25', 20.00),
+('Vincenzo', 'Kim Hee-won', 'A mafia consigliere returns to South Korea and gets involved in a fight against a corrupt conglomerate.', '2021-02-20', 20.00),
+('Start-Up', 'Oh Choong-hwan', 'Young entrepreneurs try to build a successful company in South Korea\'s high-tech industry.', '2020-10-17', 20.00),
+('It’s Okay to Not Be Okay', 'Park Shin-woo', 'A caretaker at a psychiatric ward and a children\'s book author find healing through each other.', '2020-06-20', 20.00),
+('Secret Garden', 'Shin Woo-chul', 'A stuntwoman and a CEO magically swap bodies and fall in love.', '2010-11-13', 20.00),
+('Pinocchio', 'Jo Soo-won', 'A reporter with a syndrome that makes her hiccup whenever she tells a lie works with her childhood friend to uncover the truth.', '2014-11-12', 20.00),
+('Healer', 'Lee Jung-sub', 'A night courier with a mysterious past gets involved with a reporter while uncovering a conspiracy.', '2014-12-08', 20.00),
+('Boys Over Flowers', 'Jeon Ki-sang', 'A poor girl attends a prestigious high school and becomes entangled with the F4, a group of wealthy boys.', '2009-01-05', 20.00),
+('Moon Lovers: Scarlet Heart Ryeo', 'Kim Kyu-tae', 'A woman travels back in time to the Goryeo era and gets involved in palace politics.', '2016-08-29', 20.00),
+('The Legend of the Blue Sea', 'Jin Hyuk', 'A mermaid from the Joseon era ends up in modern-day Seoul and falls in love with a genius scam artist.', '2016-11-16', 20.00);
+
+-- Users will need to be made organically to get hashed passwords (sample of what should be added)
+-- INSERT INTO users (username, email, first_name, last_name, date_of_birth) VALUES ('bsmith', 'bsmith@gmail.com', 'Bill', 'Smith', '01-01-2001'); 
+-- password: mysecret
+-- INSERT INTO users (username, email, first_name, last_name, date_of_birth) VALUES ('pjones', 'pjones@gmail.com', 'Pauline', 'Jones', '12-03-1992'); 
+-- password: acrobat
+
+
+-- Insert into roles after users have been established
+INSERT INTO roles (username, role) VALUES ('bsmith', 'admin');
+INSERT INTO roles (username, role) VALUES ('pjones', 'customer');
+
+-- Insert into genre table
+INSERT INTO genre (genre_name) VALUES ('Romance');
+INSERT INTO genre (genre_name) VALUES ('Comedy');
+INSERT INTO genre (genre_name) VALUES ('Action');
+INSERT INTO genre (genre_name) VALUES ('Fantasy');
+INSERT INTO genre (genre_name) VALUES ('Historical');
+
+
+-- Insert into drama_genre table
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (1, 1);  -- Romance for Crash Landing on You
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (4, 2);  -- Fantasy for Goblin
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (3, 3);  -- Drama for Itaewon Class
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (1, 4);  -- Romance for Descendants of the Sun
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (1, 5);  -- Romance for My Love from the Star
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (1, 6);  -- Romance for The Heirs
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (2, 7);  -- Comedy for Strong Woman Do Bong-soon
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (4, 8);  -- Mystery for W: Two Worlds
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (3, 9);  -- Drama for Reply 1988
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (4, 10); -- Fantasy for Hotel Del Luna
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (5, 11); -- Thriller for Kingdom
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (3, 12); -- Action for Vincenzo
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (3, 13); -- Drama for Start-Up
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (1, 14); -- Romance for It’s Okay to Not Be Okay
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (1, 15); -- Romance for Secret Garden
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (1, 16); -- Romance for Pinocchio
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (3, 17); -- Action for Healer
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (1, 18); -- Romance for Boys Over Flowers
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (5, 19); -- Historical for Moon Lovers: Scarlet Heart Ryeo
+INSERT INTO drama_genre (genre_id, drama_id) VALUES (4, 20); -- Fantasy for The Legend of the Blue Sea
+
+
+-- Insert into review table
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('pjones', 1, 5, 'An emotional rollercoaster with excellent chemistry between the leads.', '2024-06-01');
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('pjones', 2, 4, 'Beautifully shot with a touching storyline. Some parts felt a bit slow.', '2024-06-02');
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('bsmith', 3, 4, 'Inspiring and motivational. Loved the character development.', '2024-06-03');
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('pjones', 4, 5, 'A perfect blend of romance and action. The OST is amazing!', '2024-06-04');
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('bsmith', 5, 5, 'Unique storyline with great performances by the cast.', '2024-06-05');
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('pjones', 6, 3, 'Entertaining but felt a bit cliché at times.', '2024-06-06');
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('pjones', 7, 4, 'Hilarious and heartwarming. The lead actress was phenomenal.', '2024-06-07');
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('pjones', 8, 4, 'Intriguing plot with lots of twists. Kept me on the edge of my seat.', '2024-06-08');
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('bsmith', 9, 5, 'Nostalgic and heartwarming. A true masterpiece.', '2024-06-09');
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('pjones', 10, 4, 'Unique concept with stunning visuals. IU was amazing.', '2024-06-10');
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('bsmith', 11, 5, 'A thrilling ride with a gripping storyline. Excellent production quality.', '2024-06-11');
+INSERT INTO review (username, drama_id, rating, explanation, review_date) 
+VALUES ('pjones', 12, 4, 'Dark humor and action-packed. Song Joong-ki was fantastic.', '2024-06-12');
+
+INSERT INTO Fan_Favorite (drama_id, favorite) VALUES (1, TRUE);
+INSERT INTO Fan_Favorite (drama_id, favorite) VALUES (2, TRUE);
+INSERT INTO Fan_Favorite (drama_id, favorite) VALUES (3, TRUE);
+INSERT INTO Fan_Favorite (drama_id, favorite) VALUES (4, TRUE);
+INSERT INTO Fan_Favorite (drama_id, favorite) VALUES (5, TRUE);
+

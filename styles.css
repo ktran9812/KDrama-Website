@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    width: 98%;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; 
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.login-container h2 {
+    margin-top: 0;
+}
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-container button:hover {
+    background-color: #0056b3;
+}
+.error-message {
+    color: red;
+}
+.main-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+}
+.main-container h2 {
+    margin-top: 0;
+}
+.main-container form {
+    display: flex;
+    flex-direction: column;
+}
+.main-container input, .main-container select, .main-container button, .main-container text area {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.main-container button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.main-container button:hover {
+    background-color: #0056b3;
+}
+.genre-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.genre-container label {
+    display: flex;
+    align-items: center;
+}
+.genre-container input[type="radio"] {
+    margin-right: 5px;
+}
+.content-container {
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 50px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.account-info {
+    margin-top: 20px;
+}
+ .review {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+}
+.review p {
+        margin: 5px 0;
+}
+.watchlist, .purchased {
+    margin-top: 20px;
+}
+.drama-list {
+    display: flex;
+}
+.drama-list div {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.drama-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.drama-item {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+.drama-item img {
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+}
+.drama-details {
+    flex: 1;
+}
+.drama-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.drama-synopsis {
+    font-size: 14px;
+    margin: 10px 0;
+}
+.watchlist-button {
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.watchlist-button:hover {
+    background-color: #f0f0f0;
+}
+.main-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #999; /* Default color for placeholder */
+}
+.main-container select option {
+    color: #000; /* Default color for options */
+}
+.main-container select option:first-child {
+    color: #999; /* Color for the first option (placeholder) */
+}
+.main-container input::placeholder {
+    color: #999; /* Color for input placeholders */
+}
+
+/* New CSS for date input */
+.main-container input[type="date"] {
+    color: #999; /* Color for the default date input text */
+}
+
+.main-container input[type="date"]::-webkit-datetime-edit {
+    color: #999; /* Color for the default date input text in WebKit browsers */
+}
+
+.main-container input[type="date"]::-webkit-datetime-edit-text {
+    color: #999; /* Color for the text in the date input in WebKit browsers */
+}
+
+.main-container input[type="date"]::-webkit-datetime-edit-month-field,
+.main-container input[type="date"]::-webkit-datetime-edit-day-field,
+.main-container input[type="date"]::-webkit-datetime-edit-year-field {
+    color: #999; /* Color for the month, day, and year fields in WebKit browsers */
+}
+
+.main-container input[type="date"]::-ms-input-placeholder {
+    color: #999; /* Color for the placeholder in Edge */
+}
+
+.main-container input[type="date"]::-moz-placeholder {
+    color: #999; /* Color for the placeholder in Firefox */
+}
+
+.main-container input[type="date"]::placeholder {
+    color: #999; /* Color for the placeholder in other browsers */
+}
+
+.main-container2 {
+    width: 80%;
+    padding: 10px;
+}
+
